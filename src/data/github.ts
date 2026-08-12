@@ -1,5 +1,12 @@
 export const featuredRepos = [
   {
+    name: "fernandoportfolio",
+    url: "https://github.com/Nanduuh/fernandoportfolio",
+    description: "Código-fonte deste portfólio interativo, com React, Vite, Framer Motion e assets otimizados.",
+    language: "TypeScript",
+    tag: "Portfólio",
+  },
+  {
     name: "blog_estudos",
     url: "https://github.com/Nanduuh/blog_estudos",
     description: "Blog educacional público usado para organizar estudos e praticar desenvolvimento web.",
