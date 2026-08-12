@@ -109,7 +109,6 @@ export const projects: Project[] = [
     status: "Repositório privado",
     highlights: ["Score de leads", "Dashboard", "Automação comercial"],
     image: "/images/projects/leadhunter-ai.webp",
-    github: "https://github.com/Nanduuh/leadhunter-ai",
   },
   {
     slug: "duzia",
