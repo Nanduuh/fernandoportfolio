@@ -1,6 +1,15 @@
 import sharp from "sharp";
 
 const photo = "assets/source/fernando.png";
+const projectShots = [
+  "americanalanches",
+  "onestoprs",
+  "maniasdebicho",
+  "esteticameiahora",
+  "leadhunter-ai",
+  "portfolio",
+  "advocacia-sites",
+];
 
 await sharp(photo)
   .resize({ width: 1200, height: 1200, fit: "cover", position: "centre" })
@@ -59,3 +68,10 @@ const iconSvg = `
 
 await sharp(Buffer.from(iconSvg)).png().toFile("public/icon-512.png");
 await sharp(Buffer.from(iconSvg)).resize(192, 192).png().toFile("public/icon-192.png");
+
+for (const slug of projectShots) {
+  await sharp(`assets/source/project-shots/${slug}.png`)
+    .resize({ width: 1400, height: 880, fit: "cover", position: "top" })
+    .webp({ quality: 82 })
+    .toFile(`public/images/projects/${slug}.webp`);
+}

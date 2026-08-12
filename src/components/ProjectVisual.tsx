@@ -1,6 +1,14 @@
 import type { Project } from "../data/projects";
 
 export function ProjectVisual({ project }: { project: Project }) {
+  if (project.image) {
+    return (
+      <div className="project-shot">
+        <img src={project.image} alt={`Screenshot do projeto ${project.name}`} loading="lazy" />
+      </div>
+    );
+  }
+
   if (project.slug === "americana") {
     return (
       <div className="visual restaurant">
